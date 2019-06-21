@@ -50,12 +50,17 @@ def machineGame():
         global playerScore
         machineScore = machineScore + 1
         print("Computer: " + str(machineScore) + " Player: " + str(playerScore))
-        response = int(input("Would you like to play again? 1 = Yes, 2 = No"))
+        response = int(input("Would you like to play again? 1 = Yes, 2 = No "))
+
+        while response != 1 and response != 2:
+            print("Please enter a valid number: ")
+            response = int(input("Would you like to play again? 1 = Yes, 2 = No "))
         if response == 1:
                 humanGame()
         elif response == 2:
             print("Thanks for playing!")
             exit()
+
     else:
         print("Ok, your turn!")
         humanGame()
@@ -106,12 +111,18 @@ def humanGame():
         global playerScore
         playerScore = playerScore + 1
         print("Computer: " + str(machineScore) + " Player: " + str(playerScore))
-        response = int(input("Would you like to play again? 1 = Yes, 2 = No"))
+
+        response = int(input("Would you like to play again? 1 = Yes, 2 = No "))
+
+        while response != 1 and response != 2:
+            print("Please enter a valid number: ")
+            response = int(input("Would you like to play again? 1 = Yes, 2 = No "))
         if response == 1:
             machineGame()
         elif response == 2:
             print("Thanks for playing!")
             exit()
+
     else:
         print("Alright, my turn!")
         machineGame()
@@ -127,5 +138,3 @@ def beginGame():
         beginGame()
 
 welcome()
-
-
