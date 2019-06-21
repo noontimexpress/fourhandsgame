@@ -84,7 +84,7 @@ def humanGame():
 
     while userHand2 != 0 and userHand2 != 5:
         print("Your hand must be valid!")
-        userHand2 = int(input("What is the value of your first hand? Enter 0 or 5 here: "))
+        userHand2 = int(input("What is the value of your second hand? Enter 0 or 5 here: "))
 
     userTotal = int(input("What is your guess of the total value? Enter here: "))
 
